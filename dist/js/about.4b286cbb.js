@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkfinal_challenge"]=self["webpackChunkfinal_challenge"]||[]).push([[594],{603:function(n,a,e){e.r(a),e.d(a,{default:function(){return h}});var u=e(6768);const l={class:"about"},t=(0,u.Lk)("h1",null,"This is an about page",-1),c=[t];function r(n,a){return(0,u.uX)(),(0,u.CE)("div",l,c)}var s=e(1241);const i={},f=(0,s.A)(i,[["render",r]]);var h=f}}]);
+//# sourceMappingURL=about.4b286cbb.js.map
