@@ -1,7 +1,7 @@
 <template>
-  <!-- <nav class="navbar navbar-light" style="background-color: #e3f2fd">
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#" style="font-size: 2.5rem">🐮🍺購物</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -27,9 +27,9 @@
         </ul>
       </div>
     </div>
-  </nav> -->
+  </nav>
 
-  <nav class="nav bg-dark">
+  <!-- <nav class="nav bg-dark">
     <a href="#" class="title">
       <div class="inner"><span class="title-text">🐮🍺購物</span></div>
       <div class="inner"><span class="title-text">🐮🍺購物</span></div>
@@ -46,7 +46,7 @@
         <li><a href="#">中文/English</a></li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
 </template>
 
 <script>

@@ -20,7 +20,8 @@
           <!-- The page you are looking for might be removed or is temporally unavailable -->
           您正在尋找的頁面可能已被移除或暫時無法使用
         </p>
-        <button class="button">GO BACK HOME</button>
+        <!-- <button class="button">GO BACK HOME</button> -->
+        <router-link to="/dashboard/products" class="button">GO BACK HOME</router-link>
       </div>
     </main>
 

@@ -102,11 +102,6 @@ export default {
 .custom-margin-top {
   margin-top: 80px; /* Adjust the value as needed */
 }
-.custom-bg {
-  background-image: url("https://example.com/your-image.jpg");
-  background-size: cover;
-  background-position: center;
-}
 
 @media (min-width: 992px) {
   .rounded-tr-lg-0 {
