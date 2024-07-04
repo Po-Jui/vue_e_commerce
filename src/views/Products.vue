@@ -33,7 +33,9 @@
             <button class="btn btn-outline-primary btn-sm" @click="openModal(false, item)">
               編輯
             </button>
-            <button class="btn btn-outline-danger btn-sm">刪除</button>
+            <button class="btn btn-outline-danger btn-sm" @click="openDelProductModal(item)">
+              刪除
+            </button>
           </div>
         </td>
       </tr>
@@ -44,10 +46,12 @@
     :product="tempProduct"
     @update-product="updateProduct"
   ></ProductModal>
+  <DelModal ref="delModal" :item="tempProduct" @del-item="delProduct"></DelModal>
 </template>
 
 <script>
 import ProductModal from "@/components/ProductModal.vue";
+import DelModal from "@/components/DelModal.vue";
 export default {
   data() {
     return {
@@ -59,6 +63,7 @@ export default {
   },
   components: {
     ProductModal,
+    DelModal,
   },
   methods: {
     getProducts() {
@@ -98,6 +103,24 @@ export default {
         console.log(response);
         productComponent.hideModal();
         this.getProducts();
+      });
+    },
+    // 開啟刪除 Modal
+    openDelProductModal(item) {
+      console.log(item);
+      this.tempProduct = { ...item };
+      const delComponent = this.$refs.delModal;
+      delComponent.showModal();
+    },
+    // 刪除產品
+    delProduct() {
+      // console.log("確認刪除");
+      // this.$refs.delModal.hideModal();
+      const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/product/${this.tempProduct.id}`;
+      this.$http.delete(api).then((response) => {
+        console.log(response);
+        this.getProducts();
+        this.$refs.delModal.hideModal();
       });
     },
   },
